@@ -71,6 +71,8 @@ function renameTab (tab, tabs) {
     projectFolder = path.dirname(tab.path).split(path.sep).pop()
   }
 
+  let split = projectFolder.split('-')
+  projectFolder = split[split.length - 1]
   tab.element.innerText = projectFolder + ' — ' + tab.name
 }
 
